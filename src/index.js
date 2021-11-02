@@ -988,7 +988,7 @@
 
 
  
-const usersLogins = ["Den2525", "Curator", "SuperMan", "Assasin"];
+// const usersLogins = ["Den2525", "Curator", "SuperMan", "Assasin"];
 // const userLogin = "Curator";
 
 
@@ -997,36 +997,145 @@ const usersLogins = ["Den2525", "Curator", "SuperMan", "Assasin"];
 //   `Пользователь ${userLogin} не найден`;
 
 
-const findLogin = function (allLogins, loginToFind) {
+// const findLogin = function (allLogins, loginToFind) {
   
-  // console.log(allLogins)
-
-  // console.log(loginToFind)
-
-  // let message = `Пользователь ${loginToFind} не найден!`
-
-  for (const login of allLogins) {
+// for (const login of allLogins) {
     
+// if (login === loginToFind) {
+//       return `Пользователь ${loginToFind}  найден!`
+//     }
+//   }
+//   return `Пользователь ${loginToFind} не найден!`
 
-    if (login === loginToFind) {
+  
+//    return  allLogins.includes(loginToFind) ?
       
-      return `Пользователь ${loginToFind}  найден!`
+//     `Пользователь ${loginToFind} найден` :
+  
+//     `Пользователь ${loginToFind} не найден`;
+  
+  
+// };
+
+
+
+
+
+
+// console.log(findLogin(usersLogins, 'Den2525'))
+
+// console.log(findLogin(usersLogins, 'Vasya'))
+
+// console.log(findLogin(usersLogins,'Petya'))
+  
+// Инверсия строки в большой либо маленький регистр
+
+// const words = function (string) {
+  
+//   let arrString = string.split('');
+
+//   let invertedString = '';
+
+
+//   for (const arrayWords of arrString) {
     
 
-    }
+//     const isInLoswerCase = arrayWords === arrayWords.toLowerCase();
+
+//          invertedString += isInLoswerCase
+      
+//           ? arrayWords.toUpperCase()
+
+//           : arrayWords.toLowerCase();
+//       }
+//      return invertedString;
+    
+   
   
-  }
+// }
 
-  return `Пользователь ${loginToFind} не найден!`
+
+
+// console.log(words("QWErty"))
   
-};
+//  console.log(words("DEN4i"))
 
 
 
-
-console.log(findLogin(usersLogins, 'Den2525'))
-
-console.log(findLogin(usersLogins, 'Vasya'))
-
-console.log(findLogin(usersLogins,'Petya'))
+// const slugify = function (greeting) {
   
+//   return greeting.toLowerCase().split('').join('__');
+  
+// }
+// console.log(slugify("Hello my name is Den"))
+
+
+//Псевдомассив arguments
+
+
+
+// const fn = function (...args) {
+  
+//   console.log(args)
+
+//   let total = 0;
+
+//   for (const arg of args) {
+    
+//     if(arg < 0)
+
+//     total += arg;
+//   }
+
+//   return total;
+
+  
+ 
+ // способ второй
+
+  //...args
+
+  //способ первый для создания маасива
+
+  //const args = Array.from(arguments);
+
+
+  // console.log(args)
+
+// 
+
+
+// const filterNumber = function (arr, ...args) {
+  
+//   console.log(`array: ${arr}`);
+
+//   console.log(`args: ${args}`);
+
+ 
+
+//   let newArray = [];
+
+
+//   for (const array of arr) {
+    
+//     if (args.includes(array)) {
+      
+//       newArray.push(array);
+
+     
+
+//        console.log(`${array} есть везде!`)
+
+//     }
+
+//   }
+
+//   return newArray;
+
+// }
+ 
+
+
+// console.log(filterNumber([1, 25, 45, 4, 26, 78], 1, 26, 78, 7))
+
+// console.log(filterNumber([200,478,78,321],1,26,300,200,321))
