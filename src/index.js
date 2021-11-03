@@ -1138,4 +1138,355 @@
 
 // console.log(filterNumber([1, 25, 45, 4, 26, 78], 1, 26, 78, 7))
 
-// console.log(filterNumber([200,478,78,321],1,26,300,200,321))
+// console.log(filterNumber([200,478,78,321],1,26,300,200,321)
+
+
+// const calc = (weight, height) => {
+  
+//   const weightNum = parseFloat(weight.replace(',', '.'));
+
+
+//   const heightNum = parseFloat(height.replace(',', '.'));
+  
+
+//   const weightIndex = (weightNum / Math.pow(heightNum,2)).toFixed(1);
+
+//   return weightIndex;
+  
+// }
+
+
+// const res = calc('12', '4');
+
+// console.log(res);
+
+//Обычная функция 
+
+// function min(a, b) {
+  
+// const res =  Math.min(a, b);
+
+//   console.log(res);
+  
+//   return res
+
+// }
+
+
+
+// min(1,-3)
+
+
+
+// Так же можно написать функцию  в одну строку, 'стрелочная функция'
+
+
+// const min = (a, b) => Math.pow(a, b);
+
+
+
+// console.log(min(9,2))
+
+
+// function splitArr(mylti) {
+  
+//   const [a, b] = mylti.split(' ');
+  
+
+//   return a * b;
+
+
+
+// }
+
+
+// console.log(splitArr('10 2'))
+
+
+// function logItems(items) {
+  
+//   items.forEach((value, idx) => {
+    
+//     console.log(`${idx + 1} - ${value}`)
+
+//   });
+
+// }
+
+// logItems(['den','petya','kolya'])
+
+
+// 
+
+// const users = [
+//   { name: 'Den', age: 32 },
+  
+//   { name: 'Vasya', age: 38 },
+   
+//   { name: 'Petya', age: 40 }
+
+// ];
+
+
+// for (const user of users) {
+  
+//   console.log(`${user.name} - ${user.age}`)
+
+// }
+
+
+
+// const person = {
+
+//   name: 'Den',
+
+//   lastname: 'Hutin',
+
+//   age: 32,
+
+//   coyntry: 'Ukranian',
+
+//   city: 'Zp'
+// }
+
+
+// const userName = ['name'];
+
+// console.log(person[userName])
+
+
+
+// console.log(person)
+
+// console.log(person.name);
+
+// console.log(person.lastname);
+
+
+// console.log(person.age)
+
+
+// Краткая запись свойств
+
+
+// const userName = 'Den';
+
+// const lastname = 'Hutin'
+
+
+
+
+// const person = {
+
+//   userName,
+//   lastname
+
+// }
+
+
+// console.log(person)
+
+
+// Вычеслямые свойства
+
+
+// const userName = 'Den';
+
+// const lastName = 'Hutin'
+
+
+
+// const person = {
+
+// [userName]:lastName,
+
+// }
+
+
+// console.log(userName)
+
+
+// Ссылочный тип {} === {}
+
+// const a = { a: 1,y:2 };
+
+// const b = a;
+
+
+
+// console.log(a === b);
+
+
+// a.hello = 100;
+
+// console.log(a)
+
+// b.hello = 150;
+
+// console.log(b)
+
+
+
+
+//Массивы и функции это обьекты
+
+
+
+
+// const arr = [15, 40, 70];
+
+// arr.Hello = "Hello"
+// console.log(arr)
+
+
+
+// const fn = function () {
+  
+//   console.log('Hello Den');
+
+
+
+// };
+
+// fn.hello = ':)';
+
+// console.dir(fn.hello)
+
+
+// const a = [1, 2, 4, 7];
+
+// a.push(10, 40);
+
+
+// console.log(a)
+
+
+// Методы объекта
+
+// const playlist = {
+
+//   name: 'My super play list',
+  
+//   rating: 4.7,
+
+  
+ 
+//   tracks: ['track-1', 'track-2', 'track-3'],
+
+//     trackCount: 3,
+  
+
+//   changeName(newName) {
+    
+//     this.name = newName;
+  
+//   },
+
+
+//   updateRating(newRating) {
+    
+//     this.rating = newRating;
+
+//   },
+
+
+//   addTrack(newTrack) {
+    
+//     this.tracks.push(newTrack);
+
+   
+    // this.trackCount = this.tracks.length;
+
+ // },
+
+
+
+//метод для добавления нового элемента в массив обьекта
+//   getCountTrack() {
+    
+//     return this.tracks.length;
+
+//   }
+// }
+
+// playlist.changeName('New track');
+
+
+
+// playlist.updateRating(7)
+
+
+// playlist.addTrack('New sound');
+
+
+// console.log(playlist.getCountTrack());
+
+
+
+// playlist.addTrack('New track 2021')
+
+// console.log(playlist.getCountTrack());
+
+
+// console.log(playlist);
+
+
+
+
+
+//Перебор for...in и Object.keys|keys|values|enteries
+
+
+
+
+
+
+
+// const countTestimonials = {
+
+//   good: 12,
+  
+//   bad:8
+
+// }
+
+
+//keys массив ключей
+
+// const keys = Object.keys(countTestimonials);
+
+
+// console.log(keys)
+
+
+// for (const key of keys) {
+  
+//   console.log(countTestimonials[key])
+
+// }
+
+
+// values массив значений
+
+// const values = Object.values(countTestimonials);
+
+
+// console.log(values)
+
+
+// let totalVelue = 0;
+
+// for (const value of values) {
+  
+//   console.log(value);
+
+
+
+//   totalVelue += value;
+
+
+//   console.log(totalVelue)
+
+// }
+
+
