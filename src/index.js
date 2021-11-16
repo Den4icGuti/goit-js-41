@@ -2377,7 +2377,7 @@ const persons = [
     names: ['Vasya', 'Petya'],
 
     age: [25, 40],
-    friends: ["Goldie Gentry", "Briana Decker"],
+    friends: ["Goldie Gentry", "Briana Decker", "Adrian Cross"],
 
   },
 
@@ -2394,12 +2394,64 @@ const persons = [
 
 ];
 
-const allName = [...persons].sort((a, b) => a.friends.length - b.friends.length)
+const allFriends = persons.reduce((acc, per) => [...acc,...per.friends], []);
+console.log(allFriends)
 
-.map((person) => person.names)
+
+// Если с ключем stats есть увеличить его значение на 1
+
+// Если нет такого свойства  с таким ключем что в stats, сделать запись 1
+
+// Обычный код
+// const allStats = allFriends.reduce(
+//   (acc, stats) => {
+   
+//     return{
+    
+//        ...acc,
+    
+//     [stats]: acc[stats] ? acc[stats] + 1 : 1,
+
+//     }
+   
+
+//   },
+//   {}
+// );
+
+// console.log(allStats)
+  
+//
+  //Добавление статуса через условную  конструкцию
+  // if (acc[stats]) { 
+
+  //   acc[stats] += 1
+  //  return acc
+
+  // }
+
+  // acc[stats] = 1;
+
+  // return acc
 
 
-console.log(allName)
+
+  
+
+
+
+
+
+
+
+
+
+// const allName = [...persons].sort((a, b) => a.friends.length - b.friends.length)
+
+// .map((person) => person.names)
+
+
+// console.log(allName)
 
 
 // const allAge = persons.flatMap(person => person.age);
@@ -2428,4 +2480,55 @@ console.log(allName)
 //   console.log(sorted)
 
 
+
+const player = [
+
+
+  { id: 1224, name: 'Jack', timePlayed: 120, online: true },
+  { id: 1424, name: 'Maick', timePlayed: 142, online: true },
+  { id: 1474, name: 'Fredy', timePlayed: 147, online: false },
+  { id: 1224, name: 'Mishel', timePlayed: 210, online: false }
+  
+
+
+];
+
+
+// const totalTimePlayers = player.reduce((totalTime,{ timePlayed }) => totalTime + timePlayed,0)
+  
+
+
+// console.log(totalTimePlayers)
+
+
+
+const cart = [
+
+
+  { label: 'abble', price: 120, quantity: 2 },
+  { label: 'grap', price: 155, quantity: 3 },
+  { label: 'orange', price: 171, quantity: 4 }
+    
+  
+
+
+];
+
+
+const user = {
+
+  name: 'Bob',
+
+
+  getName() {
+    
+
+    console.log(this)
+  },
+
+};
+
+const get = user.getName()
+  
+get();
 
