@@ -2395,7 +2395,7 @@ const persons = [
 ];
 
 const allFriends = persons.reduce((acc, per) => [...acc,...per.friends], []);
-console.log(allFriends)
+// console.log(allFriends)
 
 
 // Если с ключем stats есть увеличить его значение на 1
@@ -2434,18 +2434,6 @@ console.log(allFriends)
 
   // return acc
 
-
-
-  
-
-
-
-
-
-
-
-
-
 // const allName = [...persons].sort((a, b) => a.friends.length - b.friends.length)
 
 // .map((person) => person.names)
@@ -2481,54 +2469,92 @@ console.log(allFriends)
 
 
 
-const player = [
+ 
+const counter = {
 
-
-  { id: 1224, name: 'Jack', timePlayed: 120, online: true },
-  { id: 1424, name: 'Maick', timePlayed: 142, online: true },
-  { id: 1474, name: 'Fredy', timePlayed: 147, online: false },
-  { id: 1224, name: 'Mishel', timePlayed: 210, online: false }
-  
-
-
-];
-
-
-// const totalTimePlayers = player.reduce((totalTime,{ timePlayed }) => totalTime + timePlayed,0)
-  
-
-
-// console.log(totalTimePlayers)
+  value: 0,
 
 
 
-const cart = [
-
-
-  { label: 'abble', price: 120, quantity: 2 },
-  { label: 'grap', price: 155, quantity: 3 },
-  { label: 'orange', price: 171, quantity: 4 }
+  increment(value) {
     
-  
+    console.log('increment ->this', this);
 
+    this.value += 1;
 
-];
-
-
-const user = {
-
-  name: 'Bob',
-
-
-  getName() {
-    
-
-    console.log(this)
   },
+
+  decrement(value) {
+    
+    console.log('decrement ->this', this);
+
+    this.value -= 1;
+
+  },
+  
 
 };
 
-const get = user.getName()
+const decrementBtn = document.querySelector(".js-decrement")
+
+
+const incrementBtn = document.querySelector(".js-increment")
+
+console.log(decrementBtn)
+
+console.log(incrementBtn)
+
+
+const value = document.querySelector(".js-value")
+
+
+console.log(value)
+
+
+decrementBtn.addEventListener('click', function () {
   
-get();
+  console.log('клик на декремент');
+
+  counter.decrement();
+  console.log(counter);
+
+
+  value.textContent = counter.value;
+
+});
+
+
+incrementBtn.addEventListener('click', function () { 
+
+  console.log('клик на инкрмент');
+
+
+   counter.increment();
+  console.log(counter);
+
+  value.textContent = counter.value;
+
+})
+// const updateCounter = function(value, callback){
+  
+//   callback(value);
+
+// };
+
+
+
+// updateCounter(0, counter.increment.bind(counter));
+
+// updateCounter(10, counter.decrement.bind(counter));
+
+// console.log(counter)
+
+
+
+
+
+
+
+
+
 
