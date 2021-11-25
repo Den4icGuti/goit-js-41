@@ -2470,71 +2470,71 @@ const allFriends = persons.reduce((acc, per) => [...acc,...per.friends], []);
 
 
  
-const counter = {
+// const counter = {
 
-  value: 0,
+//   value: 0,
 
 
 
-  increment(value) {
+//   increment(value) {
     
-    console.log('increment ->this', this);
+//     console.log('increment ->this', this);
 
-    this.value += 1;
+//     this.value += 1;
 
-  },
+//   },
 
-  decrement(value) {
+//   decrement(value) {
     
-    console.log('decrement ->this', this);
+//     console.log('decrement ->this', this);
 
-    this.value -= 1;
+//     this.value -= 1;
 
-  },
+//   },
   
 
-};
+// };
 
-const decrementBtn = document.querySelector(".js-decrement")
-
-
-const incrementBtn = document.querySelector(".js-increment")
-
-console.log(decrementBtn)
-
-console.log(incrementBtn)
+// const decrementBtn = document.querySelector(".js-decrement")
 
 
-const value = document.querySelector(".js-value")
+// const incrementBtn = document.querySelector(".js-increment")
+
+// console.log(decrementBtn)
+
+// console.log(incrementBtn)
 
 
-console.log(value)
+// const value = document.querySelector(".js-value")
 
 
-decrementBtn.addEventListener('click', function () {
+// console.log(value)
+
+
+// decrementBtn.addEventListener('click', function () {
   
-  console.log('клик на декремент');
+//   console.log('клик на декремент');
 
-  counter.decrement();
-  console.log(counter);
-
-
-  value.textContent = counter.value;
-
-});
+//   counter.decrement();
+//   console.log(counter);
 
 
-incrementBtn.addEventListener('click', function () { 
+//   value.textContent = counter.value;
 
-  console.log('клик на инкрмент');
+// });
 
 
-   counter.increment();
-  console.log(counter);
+// incrementBtn.addEventListener('click', function () { 
 
-  value.textContent = counter.value;
+//   console.log('клик на инкрмент');
 
-})
+
+//    counter.increment();
+//   console.log(counter);
+
+//   value.textContent = counter.value;
+
+// })
 // const updateCounter = function(value, callback){
   
 //   callback(value);
@@ -2551,10 +2551,386 @@ incrementBtn.addEventListener('click', function () {
 
 
 
+// const obj = Object.create({message:'Это свойство объектка  прототипа'});
+
+// obj.message = 'Это собственное свойство объекта'
+
+// console.log('obj',obj)
+
+// console.log(obj.message)
+
+
+// class Car {
+  
+
+//   constructor(name, model, color, price) {
+    
+//     this.name = name;
+//     this.model = model;
+//     this.color = color;
+//     this.price = price;
+
+//   }
+
+// }
+
+// const newCar = new Car();
+
+
+// console.log(newCar)
+
+
+
+// console.log(newCar)
+
+
+// const Car = function ({ brand, model, price } = {}) {
+
+ 
+  
+//   this.brand = brand;
+
+//   this.model = model;
+
+//   this.price = price;
+    
+  
+// };
+
+
+// Car.prototype.changePrice = function (newPrice) {
+  
+//   this.price = newPrice;
+// }
+
+
+// const newCar1 = new Car({
+
+//   brand: 'Ford',
+
+//   model:'Fiesta',
+
+//   price: 15000
+
+// });
+
+
+// console.log(newCar1)
+
+// newCar1.changePrice(1000)
+
+
+
+// const newCar2 = new Car({
+
+//  brand: 'Audi',
+
+//   model:'Q7',
+
+//   price: 28000
+
+// });
+
+// newCar2.changePrice(3500);
+
+// console.log(newCar2)
+
+// const newCar3 = new Car({
+
+//   brand: 'Hundai',
+  
+//   model: 'Tucson',
+  
+//   price:18000
+
+// });
+
+// console.log(newCar3)
+
+// newCar3.changePrice(554)
 
 
 
 
+
+// const User = function ({ email, name, password, } = {}) {
+  
+//   this.email = email;
+
+//   this.name = name;
+
+//   this.password = password
+
+// };
+
+// User.prototype.changeEmail = function (newEmail) {
+  
+//   this.email = newEmail;
+
+// };
+
+// User.prototype.changeName = function (newName) {
+  
+//   this.name = newName;
+
+// }
+
+// User.prototype.changePassword = function (newPassword) {
+  
+ 
+
+//   this.password = newPassword;
+
+  
+
+// }
+
+// const newUser = new User({email:'vasya@gmail.com',name:'Vasya',password:5545452});
+
+// newUser.changeEmail('vasya@gmail.com');
+
+// newUser.changeName('Vasya');
+
+// newUser.changePassword(281454)
+
+
+
+
+
+// User.loginInfo = function (staticObj) {
+
+//   console.log('User.logInfo -> staticObj', staticObj);
+//   console.log('Name: ', staticObj.name);
+//   console.log('Email: ', staticObj.email);
+//   console.log('Password: ', staticObj.password);
+// };
+
+
+// User.message = 'Я статическое свойство, меня нет в экземпляре'
+
+// User.loginInfo(newUser);
+
+// const CounterPlugin = function ({
+//   rootSelector,
+//   initialValue = 0,
+//   step = 1
+// } = {}) {
+  
+//   this._value = initialValue;
+
+//   this._step = step;
+
+//   this._refs = this._getRefs(rootSelector);
+
+//   this._bindEvents();
+  
+
+// };
+
+// CounterPlugin.prototype._getRefs = function(rootSelector){
+  
+  
+
+//   const refs = {};
+
+//   refs.container = document.querySelector(rootSelector);
+
+//   refs.decrementBtn = refs.container.querySelector('[data-decrement]');
+//   refs.incrementBtn = refs.container.querySelector('[data-increment]');
+//   refs.value = refs.container.querySelector(['data-value']);
+//   return refs;
+
+// };
+
+// CounterPlugin.prototype._bindEvents = function () {
+  
+//   this._refs.decrementBtn.addEventListener('click', () => {
+    
+//      console.log('CounterPlugin.prototype._bindEvents ->this', this)
+    
+//     this.decrement();
+
+    
+//     this.updateValueUI();
+
+//   });
+
+//   this._refs.incrementBtn.addEventListener('click', () => {
+//      console.log('CounterPlugin.prototype._bindEvents ->this', this);
+
+//     this.increment();
+   
+//     this.updateValueUI();
+   
+//   });
+
+// };
+
+// CounterPlugin.prototype.updateValueUI = function () {
+  
+//   this._refs.value.textContent = this._value;
+
+// };
+
+// CounterPlugin.prototype.decrement = function () {
+  
+//   this._value += this._step;
+
+// };
+// CounterPlugin.prototype.increment = function () {
+  
+//   this._value -= this._step;
+
+// };
+//  new CounterPlugin({ rootSelector: '#counter1',step:5});
+
+
+
+// new CounterPlugin({ rootSelector: '#counter2',step:1});
+
+
+
+class Hero { 
+
+  constructor({ name = 'hero', xp = 0 } = {}) {
+    this.name = name;
+    this.xp = xp;
+  }
+
+  gainXp(amount) { 
+   
+    console.log(`${this.name} получает ${amount} xp`);
+
+    this.xp += 1000;
+
+  }
+
+}
+
+class Warrior extends Hero { 
+
+  constructor({weapon,creet,...restProps}) { 
+   
+    super(restProps);
+
+    this.weapon = weapon;
+    this.creet = creet;
+
+  }
+   
+  attak() { 
+ 
+    console.log(`${this.name} attak use ${this.weapon}`)
+
+  }
+}
+
+// const galeg = new Warrior({name:'Галег',xp:3000,weapon:'Горящий топор',creet:'120%'})
+
+// console.log(galeg)
+
+class Mage extends Hero { 
+
+  constructor({spells, ...restProps } = {}) {
+
+    super(restProps);
+
+    this.spells = spells;
+    
+  }
+
+  speedMage() { 
+
+    console.log(`Скорость ${this.speed}  героя  ${this.name} `);
+
+
+
+  }
+
+  creetDam() { 
+
+    console.log(`Критический урон ${this.creetDamage} героя ${this.name}`)
+
+  }
+  
+
+}
+
+
+class VisixTheUndowen extends Hero { 
+
+  constructor({ hp, atk, def, spd, creetRate, resist, acc, ...restProps } = {}) { 
+
+    super(restProps);
+
+    this.hp = hp;
+    this.atk = atk;
+    this.def = def;
+    this.spd = spd;
+    this.creetRate = creetRate;
+    this.acc = acc;
+  };
+
+
+  hpVisix() { 
+
+    console.log(`Health ${this.hp} the ${this.name}`)
+
+  };
+
+  attakVisix() { 
+
+    console.log(` ${this.name} attak the ${this.atk}`);
+
+  };
+
+  defVisix() { 
+
+   console.log(`${this.name} the protection ${this.def}`)
+
+  };
+
+  spdVisix() { 
+
+    console.log(`${this.name} the ${this.spd}`)
+  }
+
+  
+  
+}
+
+
+const visix = new VisixTheUndowen({
+  name: 'Visix the Undowen',
+  hp: 50000,
+  atk: 2000,
+  def: 4700,
+  spd: 150,
+  creetRate: '100%',
+  creetDamage: '72%',
+  resist: 132,
+  acc: 220,
+  xp:12550
+});
+
+
+console.log(visix);
+
+visix.hpVisix()
+
+visix.attakVisix()
+
+visix.defVisix()
+
+// const newHero = new Mage({ name:'Каель', xp:2000, spells:'Проклятый посох', speed:124, creetDamage:'120%'});
+
+// console.log(newHero)
+
+// newHero.speedMage(145);
+
+// newHero.gainXp(3000);
+
+// newHero.creetDam('140%');
 
 
 
