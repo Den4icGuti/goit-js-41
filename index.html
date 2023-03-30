@@ -1,39 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Document</title>
-</head>
-<body>
-    <div class="buttons">
-    <div class="counter">
-        <button class="js-decrement">Уменьшить</button>
+  </head>
+  <body>
+    <a href="./simple.html">Simple gallery</a>
+    <h2>Module: Delegation</h2>
+    <h2 class="indicator js-indicator">Pause</h2>
+    <div class="field-game js-field">
+      <div class="left-top js-lt"></div>
+      <div class="centre-top js-ct"></div>
+      <div class="right-top"></div>
+      <div class="bottom-left"></div>
+      <div class="centre-bottom"></div>
+      <div class="bottom-right"></div>
 
-        <p class="js-value">0</p>
-
-        <button class="js-increment">Увеличить</button>
-        
+      <div>
+        <span class="start js-start">start</span>
+      </div>
+      <div>
+        <span class="finish js-finish">finish</span>
+      </div>
     </div>
-    </div>
-    
-    <h1>Js Module 1.1</h1>
-    <div id="counter1">
-        <button data-decrement>Увеличить</button>
-        <span data-value>0</span>
-        <button  data-increment>Уменьшить</button>
-      
-    </div>
-
-    <div  id ="counter2">
-        <button  data-decrement>Увеличить</button>
-        <span data-value>0</span>
-        <button data-increment>Уменьшить</button>
-    </div>
-  
-    <!-- <button class='js-button' type="button">Нажми Меня!</button> -->
-    <script src="src/index.js"></script>
-</body>
+    <script src="index.js" type="module"></script>
+  </body>
 </html>

@@ -1,6 +1,151 @@
 body {
   background-color: antiquewhite;
+  margin: 0;
+  padding: 0;
 }
-.btnCounterOne {
-  margin-bottom: 20px;
+
+.container {
+  width: 1270px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.title {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.item-gallery {
+  width: 255px;
+  height: auto;
+  display: block;
+}
+
+.indicator {
+  text-align: center;
+}
+
+.field-game {
+  width: 350px;
+  height: 250px;
+  border: solid 1px tomato;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  background-color: rgb(95, 114, 114);
+}
+
+.left-top {
+  width: 150px;
+  height: 80px;
+  background-color: aqua;
+  outline: solid 1px tomato;
+}
+
+.centre-top {
+  width: 80px;
+  height: 50px;
+  background-color: aqua;
+  position: absolute;
+  left: 43%;
+  top: 0;
+  outline: solid 1px tomato;
+}
+
+.right-top {
+  width: 150px;
+  height: 100px;
+  background-color: aqua;
+  position: absolute;
+  right: 0;
+  top: 0;
+  outline: solid 1px tomato;
+}
+
+.bottom-left {
+  width: 150px;
+  height: 100px;
+  background-color: aqua;
+  position: absolute;
+  bottom: 0;
+  outline: solid 1px tomato;
+}
+
+.centre-bottom {
+  width: 50px;
+  height: 130px;
+  background-color: rgb(0, 217, 255);
+  position: absolute;
+  left: 43%;
+  bottom: 0;
+  outline: solid 1px tomato;
+}
+
+.bottom-right {
+  width: 150px;
+  height: 100px;
+  background-color: aqua;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  outline: solid 1px tomato;
+  bottom: 2px;
+}
+
+.finish {
+  position: absolute;
+  right: 0;
+  color: green;
+  bottom: 45%;
+}
+
+.start {
+  display: block;
+  margin-top: 20px;
+}
+
+/*===== Gallery style====*/
+
+.item-gallery {
+  display: block;
+  width: 250px;
+  height: 300px;
+}
+
+.item-gallery:hover {
+  width: 640px;
+}
+
+.gallery {
+  padding: 0;
+  margin: 0;
+  outline: solid 1px tomato;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.item {
+  flex-basis: calc(100% / 2 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
+
+  transition: transform 200ms;
+}
+
+.item:hover {
+  transform: scale(1.5);
 }
